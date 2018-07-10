@@ -62,8 +62,8 @@ def game_hash
     },
 
   away:{
-    team_name:"Charlotte Hornets"
-    colors:["Turquoise", "Purple"]
+    team_name:"Charlotte Hornets",
+    colors:["Turquoise", "Purple"],
     players:{
       "Jeff Adrien" => {
           number: 4,
@@ -120,8 +120,38 @@ def game_hash
   }
 end 
 def num_points_scored(name)
-  game_hash[:players][:points]
+  players.fetch(:points)
 end 
+
+def shoe_size(name)
+  players.fetch(:shoe)
+end 
+
+def team_colors(team_name)
+  team.fetch(:colors)
+end 
+
+def team_names(team_name)
+  team.fetch(:number)
+end 
+
+def player_stats(name)
+  player_stats(name)
+end
+
+def big_shoe_rebounds
+  player_with_biggest_shoe_size.fetch(:rebounds)
+end
+
+
+
+
+
+
+
+
+
+
 
 
 
