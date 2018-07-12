@@ -176,6 +176,7 @@ end
 #   player_biggest_shoe_size = players.max_by{|player, stats| stats.fetch(:shoe)}[1]
 #   player_biggest_shoe_size.fetch(:rebounds)
 # end
+def big_shoe_rebounds
 shots = 0
 size = 0
 game_hash[:home][:players].merge(game_hash[:away][:players]).each do |player, stats|
