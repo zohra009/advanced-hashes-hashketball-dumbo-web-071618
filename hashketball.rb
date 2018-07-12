@@ -120,59 +120,65 @@ def game_hash
   }
 end
 
-def players
-  game_hash[:home][:players].merge(game_hash[:away][:players])
-end
+# def players
+#   game_hash[:home][:players].merge(game_hash[:away][:players])
+# end
+# 
+# def find_the_player(name)
+#   players.fetch(name)
+# end
+# 
+# def num_points_scored(name)
+#   player = find_the_player(name)
+#   player.fetch(:points)
+# end
+# 
+# def shoe_size(name)
+#   player = find_the_player(name)
+#   player.fetch(:shoe)
+# end
+# 
+# def teams
+#   game_hash.values
+# end
+# 
+# def find_the_team(team_name)
+#   teams.find {|team| team.fetch(:team_name) == team_name}
+# end
+# 
+# 
+# def team_colors(team_name)
+#   team = find_the_team(team_name)
+#   team.fetch(:colors)
+# end
+# 
+# def team
+#   game_hash.values
+# end
+# 
+# def team_names
+#   team.map{|t| t.fetch(:team_name)}
+# end
+# 
+# def dunks
+#   team.map{|team| binding.pry}
+# end
+# 
+# def player_numbers(team_name)
+#   find_the_team(team_name)[:players].map{ |player_name, stats| stats[:number] }
+# end
+# 
+# def player_stats(name)
+#   find_the_player(name)
+# end
+# 
+# def big_shoe_rebounds
+#   player_biggest_shoe_size = players.max_by{|player, stats| stats.fetch(:shoe)}[1]
+#   player_biggest_shoe_size.fetch(:rebounds)
+# end
 
-def find_the_player(name)
-  players.fetch(name)
-end
-
-def num_points_scored(name)
-  player = find_the_player(name)
-  player.fetch(:points)
-end
-
-def shoe_size(name)
-  player = find_the_player(name)
-  player.fetch(:shoe)
-end
-
-def teams
-  game_hash.values
-end
-
-def find_the_team(team_name)
-  teams.find {|team| team.fetch(:team_name) == team_name}
-end
-
-
-def team_colors(team_name)
-  team = find_the_team(team_name)
-  team.fetch(:colors)
-end
-
-def team
-  game_hash.values
-end
-
-def team_names
-  team.map{|t| t.fetch(:team_name)}
-end
-
-def dunks
-  team.map{|team| binding.pry}
-end
-
-def player_numbers(team_name)
-  find_the_team(team_name)[:players].map{ |player_name, stats| stats[:number] }
-end
-
-def player_stats(name)
-  find_the_player(name)
-end
-
-def big_shoe_rebounds
-  player_biggest_shoe_size = players.max_by{|player, stats| stats.fetch(:shoe)}[1]
-  player_biggest_shoe_size.fetch(:rebounds)
+game_hash[:home][:players].merge(game_hash[:away][:players]).each do |players, shoe|
+puts shoe[:shoe]
+binding.pry
+puts shoe[:rebounds]
 end
