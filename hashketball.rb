@@ -185,7 +185,7 @@ end
 #   shots = stats[:rebounds]
 # end
 # end
-# shots 
+# shots
 # end
 
 
@@ -198,8 +198,8 @@ end
 
 def num_points_scored(name)
   game_hash[:home][:players].each do |player, values|
-  binding.pry 
-    puts player, values[:points] 
+  binding.pry
+    puts player, values[:points]
   end
-end 
+end
 num_points_scored("Alan Anderson")
