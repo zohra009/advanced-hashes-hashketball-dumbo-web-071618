@@ -200,6 +200,9 @@ def num_points_scored(name)
   game_hash[:home][:players].each do |player, values|
   binding.pry
     puts player, values[:points]
+    if name == player 
+      puts values[:points]
+    end 
   end
 end
 num_points_scored("Alan Anderson")
