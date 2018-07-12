@@ -186,7 +186,7 @@ if size == 0 or size < stats[:shoe]
 end
 end
 binding.pry
-end 
+end
 
 
 
